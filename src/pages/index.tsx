@@ -102,14 +102,7 @@ function Mission() {
             </p>
           </Grid.Column>
           <Grid.Column floated="right" width={6}>
-            <Icon name="cc" size="massive" style={{ width: 400 }} />
-            {/* <Image
-              bordered
-              rounded
-              size="large"
-              src="/images/wireframe/white-image.png"
-            /> */}
-            {/* <Header as={"h1"} content="Caption Manager" /> */}
+            <Image size="large" src={require("../images/Logo.png")} />
           </Grid.Column>
         </Grid.Row>
       </Grid>

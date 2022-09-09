@@ -8,16 +8,27 @@ interface Props {
   children: React.ReactNode;
 }
 
+// TODO: obviously this is not good
+// but downloading a css-in-js package
+// just for this is an overkill
+const responsive_padding_on_container = `
+    .responsive_container {
+        padding: 2em 0em;
+    }
+
+    @media (min-width: 768px) {
+      .responsive_container {
+        padding: 2em 5em;
+      }
+    }
+`;
+
 export default function HowToUse({ children }: Props) {
   return (
     <Layout>
-      <Container
-        fluid
-        style={{
-          padding: "2em 5em",
-          // [Media.lessThan("tablet")]: { padding: "2em 0em" },
-        }}
-      >
+      <style>{responsive_padding_on_container}</style>
+
+      <Container className="responsive_container" fluid>
         <Grid stackable columns={2}>
           <Grid.Column computer={12} tablet={11}>
             <Segment padded>{children}</Segment>

@@ -40,7 +40,7 @@ function Introduction() {
               target={"_blank"}
               href="https://github.com/leonardolombardi07/caption-manager"
             >
-              <List.Header as="a">Open-Source</List.Header>
+              <List.Header>Open-Source</List.Header>
             </a>
 
             <List.Description>
@@ -61,7 +61,7 @@ function Introduction() {
           <List.Icon name="exclamation circle" color="red" />
           <List.Content>
             <Link to="caveats">
-              <List.Header as="a">Caveats</List.Header>
+              <List.Header>Caveats</List.Header>
             </Link>
 
             <List.Description>
@@ -76,7 +76,7 @@ function Introduction() {
           <List.Icon name="map" color="green" />
           <List.Content>
             <Link to={"/roadmap"}>
-              <List.Header as="a">Roadmap</List.Header>
+              <List.Header>Roadmap</List.Header>
             </Link>
             <List.Description>
               There are new feature ideas being thought. You can see them on the{" "}

@@ -24,7 +24,7 @@ export default function HeaderMenu() {
             on="hover"
             trigger={
               <Menu.Item position="right">
-                <Button disabled as="a" inverted>
+                <Button disabled inverted>
                   Download
                 </Button>
               </Menu.Item>
