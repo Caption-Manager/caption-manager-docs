@@ -2,7 +2,6 @@ import * as React from "react";
 import { Container, Segment, Grid, Button, Popup } from "semantic-ui-react";
 import Menu from "./Menu";
 import Layout from "../../components/Layout";
-import Media from "../../utils/Media";
 
 interface Props {
   children: React.ReactNode;

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Header, List, Container } from "semantic-ui-react";
+import { Header } from "semantic-ui-react";
 import HowToUseTemplate from "./../../templates/HowToUse";
 import Seo from "../../components/Seo";
 
