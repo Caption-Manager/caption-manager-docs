@@ -110,9 +110,9 @@ function LinkedMenuItem({ to, ...menuProps }: LinkedMenuItemProps) {
   const location = useLocation();
   const active =
     to === "/how-to-use/"
-      ? location.pathname === "/how-to-use/" ||
-        location.pathname === "/how-to-use"
-      : location.href.includes(to);
+      ? location?.pathname === "/how-to-use/" ||
+        location?.pathname === "/how-to-use"
+      : location?.href?.includes(to);
 
   return <Menu.Item as={Link} to={to} active={active} {...menuProps} />;
 }

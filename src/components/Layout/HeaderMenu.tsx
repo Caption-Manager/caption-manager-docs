@@ -43,7 +43,7 @@ interface LinkedMenuItemProps extends SemanticMenuItemProps {
 function LinkedMenuItem({ to, children, ...rest }: LinkedMenuItemProps) {
   const location = useLocation();
   const active =
-    to === "/" ? location.pathname === to : location.href.includes(to);
+    to === "/" ? location?.pathname === to : location?.href?.includes(to);
   return (
     <Link to={to}>
       <Menu.Item active={active} {...rest}>
