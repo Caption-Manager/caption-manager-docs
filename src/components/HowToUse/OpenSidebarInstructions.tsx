@@ -7,7 +7,8 @@ export default function OpenSidebarInstructionsList() {
     <React.Fragment>
       <OpenAddOnInstructions />
       <List.Item>
-        Tap on <b>Open sidebar</b>.
+        Click on the <b>"Open sidebar"</b> button. A sidebar will open on the
+        right side of your screen.
       </List.Item>
     </React.Fragment>
   );

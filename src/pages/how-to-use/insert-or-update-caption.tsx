@@ -16,7 +16,7 @@ export function Head() {
 export default function InsertOrUpdateCaption() {
   return (
     <HowToUseTemplate>
-      <Header as={"h1"} content="Insert or update a caption" dividing />
+      <Header as={"h1"} content="Insert or Update a Caption" dividing />
       <Instructions />
     </HowToUseTemplate>
   );
@@ -57,16 +57,16 @@ function Instructions() {
           </List.Item>
           <List.Description style={{ marginBottom: 5 }}>
             Type a label that best describes the selected element, such as a
-            figure, table, or equation. Labels are attached to the selected
-            element type and, after edited, are saved through document sessions.
+            "Figure", "Table", or "Equation". Labels are attached to the
+            selected element type and, after edited, are saved through document
+            sessions.
           </List.Description>
 
           <List.Item>
-            Enable or disable <br />
-            <b>Auto Update Captions</b>.
+            Enable or disable <b>Auto Update Captions</b>.
             <List.Description style={{ marginBottom: 5 }}>
               If enabled, all captions of the selected element type will be
-              updated with the given label and corresponding correct number.
+              updated with the given label and corresponding number.
             </List.Description>
           </List.Item>
 
@@ -81,15 +81,16 @@ function Instructions() {
               >
                 Bookmark
               </a>
-              , which can be referenced to help people find content or move
-              around your document.
+              , which can be referenced to help people find the caption in your
+              document.
             </List.Description>
           </List.Item>
         </List.List>
       </List.Item>
 
       <List.Item>
-        Press enter or click on the "<b>Save Caption</b>" button.
+        Press enter or click on the "<b>Save Caption</b>" button and wait a few
+        seconds.
       </List.Item>
     </List>
   );

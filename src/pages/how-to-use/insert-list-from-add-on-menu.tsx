@@ -16,7 +16,7 @@ export function Head() {
 export default function InsertListFromAddOnMenu() {
   return (
     <HowToUseTemplate>
-      <Header as={"h1"} content="Insert list from the add-on menu" dividing />
+      <Header as={"h1"} content="Insert List From Add-on Menu" dividing />
       <Instructions />
     </HowToUseTemplate>
   );
@@ -36,16 +36,15 @@ function Instructions() {
       </List.Item>
 
       <List.Item>
-        Tap on <b>Insert a list</b>.
+        Tap on the <b>Insert a list</b> menu.
       </List.Item>
 
       <List.Item>
-        Tap on an <b>element type</b> (image, table or equation).
+        Tap on a targeted <b>element type</b> (image, table or equation).
       </List.Item>
 
       <List.Item>
-        Click on a <b>list type</b> (how you want the list to look) to insert
-        the list.
+        Click on a <b>list type</b> and wait a few seconds.
       </List.Item>
     </List>
   );

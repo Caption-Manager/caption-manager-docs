@@ -16,7 +16,7 @@ export function Head() {
 export default function InsertListFromSidebar() {
   return (
     <HowToUseTemplate>
-      <Header as={"h1"} content="Insert list from sidebar" dividing />
+      <Header as={"h1"} content="Insert List From Sidebar" dividing />
       <Instructions />
     </HowToUseTemplate>
   );
@@ -28,7 +28,7 @@ function Instructions() {
       <OpenSidebarInstructions />
 
       <List.Item>
-        Open the <b>"Insert a list"</b>
+        Open the <b>"Insert list"</b>
         panel, the second item of the sidebar.
       </List.Item>
 
@@ -46,12 +46,11 @@ function Instructions() {
       </List.Item>
 
       <List.Item>
-        Select the targeted <b>list type</b> of your list (how you want the list
-        to look).
+        Select the targeted <b>list type</b> of your list.
       </List.Item>
 
       <List.Item>
-        Click on the "<b>Insert list</b>" button.
+        Click on the "<b>Insert list</b>" button and wait a few seconds.
       </List.Item>
     </List>
   );

@@ -23,7 +23,6 @@ export default function HomePage() {
     <Layout>
       <Banner />
       <Mission />
-      {/* <Testimonies /> */}
     </Layout>
   );
 }
@@ -103,7 +102,7 @@ function Mission() {
               bookmark your captions one by one.
             </p>
           </Grid.Column>
-          <Grid.Column floated="right" width={6}>
+          <Grid.Column only="computer" floated="right" width={6}>
             <Image size="large" src={Logo} />
           </Grid.Column>
         </Grid.Row>

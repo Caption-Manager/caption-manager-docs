@@ -13,6 +13,8 @@ interface Section {
   items: SectionItem[];
 }
 
+// TODO: we should somehow generate the sections and
+// pathnames automatically
 const sections: Section[] = [
   {
     title: "How to Use",

@@ -51,6 +51,6 @@ function LinkedMenuItem({ to, children, ...rest }: LinkedMenuItemProps) {
 }
 
 function isActive(to: string) {
-  if (location.pathname === to) return true;
+  if (location.pathname === to) return true; // Home page
   return getSlugs(location.href).includes(to.replace("/", ""));
 }

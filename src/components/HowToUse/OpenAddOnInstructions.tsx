@@ -27,7 +27,7 @@ export default function OpenAddOnMenuInstructions() {
       </List.Item>
 
       <List.Item>
-        Tap on the <b>Caption Manager</b> add-on.
+        Tap on the <b>"Caption Manager"</b> add-on.
       </List.Item>
     </React.Fragment>
   );
