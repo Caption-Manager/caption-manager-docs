@@ -9,7 +9,6 @@ import {
   Popup,
   MenuItemProps as SemanticMenuItemProps,
 } from "semantic-ui-react";
-import getSlugs from "../../utils/getSlugs";
 
 export default function HeaderMenu() {
   return (
@@ -43,15 +42,11 @@ interface LinkedMenuItemProps extends SemanticMenuItemProps {
 
 function LinkedMenuItem({ to, children, ...rest }: LinkedMenuItemProps) {
   const location = useLocation();
-
-  function isActive(to: string) {
-    if (location.pathname === to) return true; // Home page
-    return getSlugs(location.href).includes(to.replace("/", ""));
-  }
-
+  const active =
+    to === "/" ? location.pathname === to : location.href.includes(to);
   return (
     <Link to={to}>
-      <Menu.Item active={isActive(to)} {...rest}>
+      <Menu.Item active={active} {...rest}>
         {children}
       </Menu.Item>
     </Link>

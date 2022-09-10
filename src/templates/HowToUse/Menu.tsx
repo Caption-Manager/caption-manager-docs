@@ -2,7 +2,6 @@ import * as React from "react";
 import { Link } from "gatsby";
 import { useLocation } from "@reach/router";
 import { Menu, MenuItemProps } from "semantic-ui-react";
-import getSlugs from "../../utils/getSlugs";
 
 interface SectionItem {
   pathname: string;
@@ -94,7 +93,6 @@ function MenuSection({ section }: MenuSectionProps) {
         {items.map((item) => (
           <LinkedMenuItem
             to={`/how-to-use/${item.pathname}`}
-            pathname={item.pathname}
             name={item.title}
             key={item.pathname}
           />
@@ -106,19 +104,15 @@ function MenuSection({ section }: MenuSectionProps) {
 
 interface LinkedMenuItemProps extends MenuItemProps {
   to: string;
-  pathname: string;
 }
 
-function LinkedMenuItem({ to, pathname, ...menuProps }: LinkedMenuItemProps) {
+function LinkedMenuItem({ to, ...menuProps }: LinkedMenuItemProps) {
   const location = useLocation();
+  const active =
+    to === "/how-to-use/"
+      ? location.pathname === "/how-to-use/" ||
+        location.pathname === "/how-to-use"
+      : location.href.includes(to);
 
-  function isActive(pathname: string) {
-    const slugs = getSlugs(location.href);
-    if (slugs.length === 1 && pathname === "") return true;
-    return slugs.at(-1) === pathname;
-  }
-
-  return (
-    <Menu.Item as={Link} to={to} active={isActive(pathname)} {...menuProps} />
-  );
+  return <Menu.Item as={Link} to={to} active={active} {...menuProps} />;
 }
