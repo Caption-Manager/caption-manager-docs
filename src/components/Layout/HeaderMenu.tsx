@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Link } from "gatsby";
+import { useLocation } from "@reach/router";
 import {
   Segment,
   Menu,
@@ -41,6 +42,13 @@ interface LinkedMenuItemProps extends SemanticMenuItemProps {
 }
 
 function LinkedMenuItem({ to, children, ...rest }: LinkedMenuItemProps) {
+  const location = useLocation();
+
+  function isActive(to: string) {
+    if (location.pathname === to) return true; // Home page
+    return getSlugs(location.href).includes(to.replace("/", ""));
+  }
+
   return (
     <Link to={to}>
       <Menu.Item active={isActive(to)} {...rest}>
@@ -48,9 +56,4 @@ function LinkedMenuItem({ to, children, ...rest }: LinkedMenuItemProps) {
       </Menu.Item>
     </Link>
   );
-}
-
-function isActive(to: string) {
-  if (location.pathname === to) return true; // Home page
-  return getSlugs(location.href).includes(to.replace("/", ""));
 }

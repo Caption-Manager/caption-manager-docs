@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Link } from "gatsby";
+import { useLocation } from "@reach/router";
 import { Menu, MenuItemProps } from "semantic-ui-react";
 import getSlugs from "../../utils/getSlugs";
 
@@ -81,7 +82,7 @@ function MenuSection({ section }: MenuSectionProps) {
       <LinkedMenuItem
         to={`/how-to-use/${item.pathname}`}
         name={item.title}
-        active={isActive(item.pathname)}
+        pathname={item.pathname}
       />
     );
   }
@@ -93,8 +94,8 @@ function MenuSection({ section }: MenuSectionProps) {
         {items.map((item) => (
           <LinkedMenuItem
             to={`/how-to-use/${item.pathname}`}
+            pathname={item.pathname}
             name={item.title}
-            active={isActive(item.pathname)}
             key={item.pathname}
           />
         ))}
@@ -105,14 +106,19 @@ function MenuSection({ section }: MenuSectionProps) {
 
 interface LinkedMenuItemProps extends MenuItemProps {
   to: string;
+  pathname: string;
 }
 
-function LinkedMenuItem({ to, ...menuProps }: LinkedMenuItemProps) {
-  return <Menu.Item as={Link} to={to} {...menuProps} />;
-}
+function LinkedMenuItem({ to, pathname, ...menuProps }: LinkedMenuItemProps) {
+  const location = useLocation();
 
-function isActive(pathname: string) {
-  const slugs = getSlugs(location.href);
-  if (slugs.length === 1 && pathname === "") return true;
-  return slugs.at(-1) === pathname;
+  function isActive(pathname: string) {
+    const slugs = getSlugs(location.href);
+    if (slugs.length === 1 && pathname === "") return true;
+    return slugs.at(-1) === pathname;
+  }
+
+  return (
+    <Menu.Item as={Link} to={to} active={isActive(pathname)} {...menuProps} />
+  );
 }
