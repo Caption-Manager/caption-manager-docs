@@ -26,6 +26,13 @@ export default function Seo({ title, description, pathname, children }: Props) {
   return (
     <React.Fragment>
       <title>{seo.title}</title>
+
+      {/* The tag below serves to verify the domain of the website without having to pay
+      a custom domain */}
+      <meta
+        name="google-site-verification"
+        content="ZI1ESuHMWS-bwSyKBIn8-3N1won6rDxz9ggeIr4v4iY"
+      />
       <meta id="description" name="description" content={seo.description} />
       <meta id="image" name="image" content={seo.image} />
       {children}
