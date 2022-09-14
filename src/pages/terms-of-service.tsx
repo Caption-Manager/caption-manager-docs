@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Segment, Container } from "semantic-ui-react";
+import { useSiteMetadata } from "../components/hooks/useSiteMetadata";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 
@@ -8,6 +9,7 @@ export function Head() {
 }
 
 export default function TermsOfService() {
+  const siteMetadata = useSiteMetadata();
   return (
     <Layout>
       <div
@@ -31,8 +33,9 @@ export default function TermsOfService() {
             </p>
             <p>
               These Terms of Service (“Terms”, “Terms of Service”) govern your
-              use of our website located at <b>captionmanager.com</b> (together
-              or individually “Service”) operated by <b>Caption Manager</b>.
+              use of our website located at <b>{siteMetadata?.siteUrl}</b>{" "}
+              (together or individually “Service”) operated by{" "}
+              <b>Caption Manager</b>.
             </p>
             <p>
               Our Privacy Policy also governs your use of our Service and
@@ -488,7 +491,7 @@ export default function TermsOfService() {
               <a href="https://policymaker.io/terms-and-conditions/">
                 Terms of Service
               </a>{" "}
-              were created for <b>captionmanager.com</b> by{" "}
+              were created for <b>{siteMetadata?.siteUrl}</b> by{" "}
               <a href="https://policymaker.io">PolicyMaker.io</a> on 2022-09-09.
             </p>
           </Container>

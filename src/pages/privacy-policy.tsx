@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Segment, Container } from "semantic-ui-react";
+import { useSiteMetadata } from "../hooks/useSiteMetadata";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 
@@ -8,6 +9,7 @@ export function Head() {
 }
 
 export default function PrivacyPolicy() {
+  const siteMetadata = useSiteMetadata();
   return (
     <Layout>
       <div
@@ -21,10 +23,10 @@ export default function PrivacyPolicy() {
           <Container text>
             <h1>Privacy Policy for Caption Manager</h1>
             <p>
-              At Caption Manager, accessible from captionmanage.com, one of our
-              main priorities is the privacy of our visitors. This Privacy
-              Policy document contains types of information that is collected
-              and recorded by Caption Manager and how we use it.
+              At Caption Manager, accessible from {siteMetadata?.siteUrl}, one
+              of our main priorities is the privacy of our visitors. This
+              Privacy Policy document contains types of information that is
+              collected and recorded by Caption Manager and how we use it.
             </p>
             <p>
               If you have additional questions or require more information about
