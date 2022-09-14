@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Segment, Container } from "semantic-ui-react";
-import { useSiteMetadata } from "../components/hooks/useSiteMetadata";
+import { useSiteMetadata } from "../hooks/useSiteMetadata";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 
