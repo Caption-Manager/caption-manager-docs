@@ -18,7 +18,9 @@ export default function HeaderMenu() {
           <LinkedMenuItem to="/">Home</LinkedMenuItem>
           <LinkedMenuItem to="/how-to-use">How to Use</LinkedMenuItem>
           <LinkedMenuItem to="/roadmap">Roadmap</LinkedMenuItem>
-          <Popup
+
+          {/* Refused on Google verification process. Uncomment when there's a link to download. */}
+          {/* <Popup
             position="bottom center"
             content="Not avaliable yet."
             on="hover"
@@ -29,7 +31,7 @@ export default function HeaderMenu() {
                 </Button>
               </Menu.Item>
             }
-          />
+          /> */}
         </Container>
       </Menu>
     </Segment>
