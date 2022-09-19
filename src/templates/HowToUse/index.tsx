@@ -52,7 +52,8 @@ function DesktopMenu() {
 function MobileMenu() {
   const [isOpen, setIsOpen] = React.useState(false);
   return (
-    <Grid.Column only="mobile">
+    // zIndex to make sure button stays on top of Layout Footer
+    <Grid.Column only="mobile" style={{ zIndex: 10 }}>
       <Popup
         open={isOpen}
         onOpen={() => setIsOpen(true)}
@@ -68,7 +69,9 @@ function MobileMenu() {
             <Button
               circular
               floated="right"
-              color="black"
+              // Teal to make sure its visible on black AND
+              //  white backgrounds
+              color="teal"
               size="massive"
               icon={isOpen ? "close" : "list"}
             />
