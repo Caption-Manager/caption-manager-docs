@@ -23,7 +23,7 @@ export default function TermsOfService() {
         <Segment padded basic style={{ margin: "1em", width: "90%" }}>
           <Container text>
             <h1 style={{ textAlign: "center" }}>
-              Terms and Conditions for Caption Manager
+              Terms of Service for Caption Manager
             </h1>
             <p>
               <i>Last updated: 2022-19-09</i>
