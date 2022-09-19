@@ -23,7 +23,7 @@ export default function Footer() {
               </List>
             </Grid.Column>
             <Grid.Column width={3}>
-              <Header inverted as="h4" content="More" />
+              <Header inverted as="h4" content="Legal" />
               <List link inverted>
                 <List.Item as={Link} to="/privacy-policy">
                   Privacy Policy
