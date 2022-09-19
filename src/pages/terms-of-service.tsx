@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "gatsby";
 import { Segment, Container } from "semantic-ui-react";
 import { useSiteMetadata } from "../hooks/useSiteMetadata";
 import Layout from "../components/Layout";
@@ -21,26 +22,31 @@ export default function TermsOfService() {
       >
         <Segment padded basic style={{ margin: "1em", width: "90%" }}>
           <Container text>
-            <h2 style={{ textAlign: "center" }}>
-              <b>TERMS AND CONDITIONS</b>
-            </h2>
-            <p>Last updated: 2022-09-09</p>
+            <h1 style={{ textAlign: "center" }}>
+              Terms and Conditions for Caption Manager
+            </h1>
             <p>
-              1. <b>Introduction</b>
+              <i>Last updated: 2022-19-09</i>
             </p>
+            {/*  */}
+            <h1>Introduction</h1>
             <p>
               Welcome to <b>Caption Manager</b> add-on!
             </p>
             <p>
               These Terms of Service (“Terms”, “Terms of Service”) govern your
-              use of our website located at <b>{siteMetadata?.siteUrl}</b>{" "}
+              use of our Add-on, whose documentation can be found at the website
+              located at{" "}
+              <a target={"_blank"} href={siteMetadata?.siteUrl}>
+                {siteMetadata?.siteUrl}
+              </a>{" "}
               (together or individually “Service”) operated by{" "}
               <b>Caption Manager</b>.
             </p>
             <p>
-              Our Privacy Policy also governs your use of our Service and
-              explains how we collect, safeguard and disclose information that
-              results from your use of our web pages.
+              Our <Link to="/privacy-policy">Privacy Policy</Link> also governs
+              your use of our Service and explains how we collect, safeguard and
+              disclose information that results from your use of our services.
             </p>
             <p>
               Your agreement with us includes these Terms and our Privacy Policy
@@ -50,47 +56,24 @@ export default function TermsOfService() {
             <p>
               If you do not agree with (or cannot comply with) Agreements, then
               you may not use the Service, but please let us know by emailing at{" "}
-              <b>leonardolombardi@poli.ufrj.br</b> so we can try to find a
-              solution. These Terms apply to all visitors, users and others who
-              wish to access or use Service.
+              <a href={"mailto:captionmanagerondocs@gmail.com"}>
+                captionmanagerondocs@gmail.com
+              </a>{" "}
+              so we can try to find a solution. These Terms apply to all
+              visitors, users and others who wish to access or use Service.
             </p>
-            <p>
-              2. <b>Communications</b>
-            </p>
-            <p>
-              By using our Service, you agree to subscribe to newsletters,
-              marketing or promotional materials and other information we may
-              send. However, you may opt out of receiving any, or all, of these
-              communications from us by following the unsubscribe link or by
-              emailing at leonardolombardi@poli.ufrj.br.
-            </p>
+            {/*  */}
 
+            <h1>Content</h1>
             <p>
-              3. <b>Contests, Sweepstakes and Promotions</b>
+              Content found on or through this Service are used as specified on
+              the Privacy Policy. You may not distribute, modify, transmit,
+              reuse, download, repost, copy, or use said Content, whether in
+              whole or in part, for commercial purposes or for personal gain,
+              without express advance written permission from us.
             </p>
-            <p>
-              Any contests, sweepstakes or other promotions (collectively,
-              “Promotions”) made available through Service may be governed by
-              rules that are separate from these Terms of Service. If you
-              participate in any Promotions, please review the applicable rules
-              as well as our Privacy Policy. If the rules for a Promotion
-              conflict with these Terms of Service, Promotion rules will apply.
-            </p>
-
-            <p>
-              4. <b>Content</b>
-            </p>
-            <p>
-              Content found on or through this Service are the property of
-              Caption Manager or used with permission. You may not distribute,
-              modify, transmit, reuse, download, repost, copy, or use said
-              Content, whether in whole or in part, for commercial purposes or
-              for personal gain, without express advance written permission from
-              us.
-            </p>
-            <p>
-              5. <b>Prohibited Uses</b>
-            </p>
+            {/*  */}
+            <h1>Prohibited Uses</h1>
             <p>
               You may use Service only for lawful purposes and in accordance
               with Terms. You agree not to use Service:
@@ -167,29 +150,8 @@ export default function TermsOfService() {
               0.9. Otherwise attempt to interfere with the proper working of
               Service.
             </p>
-            <p>
-              6. <b>Analytics</b>
-            </p>
-            <p>
-              We may use third-party Service Providers to monitor and analyze
-              the use of our Service.
-            </p>
-            <p>
-              7. <b>No Use By Minors</b>
-            </p>
-            <p>
-              Service is intended only for access and use by individuals at
-              least eighteen (18) years old. By accessing or using Service, you
-              warrant and represent that you are at least eighteen (18) years of
-              age and with the full authority, right, and capacity to enter into
-              this agreement and abide by all of the terms and conditions of
-              Terms. If you are not at least eighteen (18) years old, you are
-              prohibited from both the access and usage of Service.
-            </p>
-
-            <p>
-              8. <b>Intellectual Property</b>
-            </p>
+            {/*  */}
+            <h1>Intellectual Property</h1>
             <p>
               Service and its original content (excluding Content provided by
               users), features and functionality are and will remain the
@@ -197,11 +159,14 @@ export default function TermsOfService() {
               is protected by copyright, trademark, and other laws of and
               foreign countries. Our trademarks may not be used in connection
               with any product or service without the prior written consent of
-              Caption Manager.
+              Caption Manager as specfied on our license at{" "}
+              <a href="https://github.com/Caption-Manager/caption-manager/blob/main/LICENSE">
+                Github
+              </a>{" "}
+              (if any).
             </p>
-            <p>
-              9. <b>Copyright Policy</b>
-            </p>
+            {/*  */}
+            <h1>Copyright Policy</h1>
             <p>
               We respect the intellectual property rights of others. It is our
               policy to respond to any claim that Content posted on Service
@@ -212,10 +177,11 @@ export default function TermsOfService() {
               If you are a copyright owner, or authorized on behalf of one, and
               you believe that the copyrighted work has been copied in a way
               that constitutes copyright infringement, please submit your claim
-              via email to leonardolombardi@poli.ufrj.br, with the subject line:
-              “Copyright Infringement” and include in your claim a detailed
-              description of the alleged Infringement as detailed below, under
-              “DMCA Notice and Procedure for Copyright Infringement Claims”
+              via email to captionmanagerondocs@gmail.com, with the subject
+              line: “Copyright Infringement” and include in your claim a
+              detailed description of the alleged Infringement as detailed
+              below, under “DMCA Notice and Procedure for Copyright Infringement
+              Claims”
             </p>
             <p>
               You may be held accountable for damages (including costs and
@@ -223,10 +189,8 @@ export default function TermsOfService() {
               infringement of any Content found on and/or through Service on
               your copyright.
             </p>
-            <p>
-              10.{" "}
-              <b>DMCA Notice and Procedure for Copyright Infringement Claims</b>
-            </p>
+            {/*  */}
+            <h1>DMCA Notice and Procedure for Copyright Infringement Claims</h1>
             <p>
               You may submit a notification pursuant to the Digital Millennium
               Copyright Act (DMCA) by providing our Copyright Agent with the
@@ -262,14 +226,13 @@ export default function TermsOfService() {
             </p>
             <p>
               You can contact our Copyright Agent via email at
-              leonardolombardi@poli.ufrj.br.
+              captionmanagerondocs@gmail.com.
             </p>
-            <p>
-              11. <b>Error Reporting and Feedback</b>
-            </p>
+            {/*  */}
+            <h1>Error Reporting and Feedback</h1>
             <p>
               You may provide us either directly at
-              leonardolombardi@poli.ufrj.br or via third party sites and tools
+              captionmanagerondocs@gmail.com or via third party sites and tools
               with information and feedback concerning errors, suggestions for
               improvements, ideas, problems, complaints, and other matters
               related to our Service (“Feedback”). You acknowledge and agree
@@ -287,9 +250,8 @@ export default function TermsOfService() {
               create derivative works, publish, distribute and commercialize)
               Feedback in any manner and for any purpose.
             </p>
-            <p>
-              12. <b>Links To Other Web Sites</b>
-            </p>
+            {/*  */}
+            <h1>Links To Other Web Sites</h1>
             <p>
               Our Service may contain links to third party web sites or services
               that are not owned or controlled by Caption Manager.
@@ -327,9 +289,8 @@ export default function TermsOfService() {
               WE STRONGLY ADVISE YOU TO READ THE TERMS OF SERVICE AND PRIVACY
               POLICIES OF ANY THIRD PARTY WEB SITES OR SERVICES THAT YOU VISIT.
             </p>
-            <p>
-              13. <b>Disclaimer Of Warranty</b>
-            </p>
+            {/*  */}
+            <h1>Disclaimer Of Warranty</h1>
             <p>
               THESE SERVICES ARE PROVIDED BY COMPANY ON AN “AS IS” AND “AS
               AVAILABLE” BASIS. COMPANY MAKES NO REPRESENTATIONS OR WARRANTIES
@@ -363,9 +324,8 @@ export default function TermsOfService() {
               THE FOREGOING DOES NOT AFFECT ANY WARRANTIES WHICH CANNOT BE
               EXCLUDED OR LIMITED UNDER APPLICABLE LAW.
             </p>
-            <p>
-              14. <b>Limitation Of Liability</b>
-            </p>
+            {/*  */}
+            <h1>Limitation Of Liability</h1>
             <p>
               EXCEPT AS PROHIBITED BY LAW, YOU WILL HOLD US AND OUR OFFICERS,
               DIRECTORS, EMPLOYEES, AND AGENTS HARMLESS FOR ANY INDIRECT,
@@ -387,9 +347,8 @@ export default function TermsOfService() {
               INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE PRIOR LIMITATION OR
               EXCLUSION MAY NOT APPLY TO YOU.
             </p>
-            <p>
-              15. <b>Termination</b>
-            </p>
+            {/*  */}
+            <h1>Termination</h1>
             <p>
               We may terminate or suspend your account and bar access to Service
               immediately, without prior notice or liability, under our sole
@@ -406,9 +365,8 @@ export default function TermsOfService() {
               limitation, ownership provisions, warranty disclaimers, indemnity
               and limitations of liability.
             </p>
-            <p>
-              16. <b>Governing Law</b>
-            </p>
+            {/*  */}
+            <h1>Governing Law</h1>
             <p>
               These Terms shall be governed and construed in accordance with the
               laws of Brazil, which governing law applies to agreement without
@@ -423,9 +381,8 @@ export default function TermsOfService() {
               Service and supersede and replace any prior agreements we might
               have had between us regarding Service.
             </p>
-            <p>
-              17. <b>Changes To Service</b>
-            </p>
+            {/*  */}
+            <h1>Changes To Service</h1>
             <p>
               We reserve the right to withdraw or amend our Service, and any
               service or material we provide via Service, in our sole discretion
@@ -434,9 +391,8 @@ export default function TermsOfService() {
               time to time, we may restrict access to some parts of Service, or
               the entire Service, to users, including registered users.
             </p>
-            <p>
-              18. <b>Amendments To Terms</b>
-            </p>
+            {/*  */}
+            <h1>Amendments To Terms</h1>
             <p>
               We may amend Terms at any time by posting the amended terms on
               this site. It is your responsibility to review these Terms
@@ -454,9 +410,8 @@ export default function TermsOfService() {
               you do not agree to the new terms, you are no longer authorized to
               use Service.
             </p>
-            <p>
-              19. <b>Waiver And Severability</b>
-            </p>
+            {/*  */}
+            <h1>Waiver And Severability</h1>
             <p>
               No waiver by Company of any term or condition set forth in Terms
               shall be deemed a further or continuing waiver of such term or
@@ -471,27 +426,25 @@ export default function TermsOfService() {
               minimum extent such that the remaining provisions of Terms will
               continue in full force and effect.
             </p>
-            <p>
-              20. <b>Acknowledgement</b>
-            </p>
+            {/*  */}
+            <h1>Acknowledgement</h1>
             <p>
               BY USING SERVICE OR OTHER SERVICES PROVIDED BY US, YOU ACKNOWLEDGE
               THAT YOU HAVE READ THESE TERMS OF SERVICE AND AGREE TO BE BOUND BY
               THEM.
             </p>
-            <p>
-              21. <b>Contact Us</b>
-            </p>
+            {/*  */}
+            <h1>Contact Us</h1>
             <p>
               Please send your feedback, comments, requests for technical
-              support by email: <b>leonardolombardi@poli.ufrj.br</b>.
+              support by email: <b>captionmanagerondocs@gmail.com</b>.
             </p>
             <p style={{ marginTop: "5em", fontSize: "0.7em" }}>
               These{" "}
               <a href="https://policymaker.io/terms-and-conditions/">
                 Terms of Service
               </a>{" "}
-              were created for <b>{siteMetadata?.siteUrl}</b> by{" "}
+              were first generated for <b>{siteMetadata?.siteUrl}</b> by{" "}
               <a href="https://policymaker.io">PolicyMaker.io</a> on 2022-09-09.
             </p>
           </Container>
