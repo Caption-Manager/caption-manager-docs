@@ -33,7 +33,7 @@ function Instructions() {
       </List.Item>
 
       <List.Item>
-        Select an image, table or equation on document.
+        Select an image, table, or equation on the document.
         <List.Description>
           If the selected element already has a <b>caption</b>, the{" "}
           <b>"Insert or update a caption"</b> panel will be filled with the
@@ -56,14 +56,15 @@ function Instructions() {
             Provide a <b>caption label</b>.
           </List.Item>
           <List.Description style={{ marginBottom: 5 }}>
-            Type a label that best describes the selected element, such as a
+            Type a label that best describes the selected element, such as
             "Figure", "Table", or "Equation". Labels are attached to the
             selected element type and, after edited, are saved through document
             sessions.
           </List.Description>
 
           <List.Item>
-            Enable or disable <b>Auto Update Captions</b>.
+            Enable or disable <br />
+            <b>Auto Update Captions</b>.
             <List.Description style={{ marginBottom: 5 }}>
               If enabled, all captions of the selected element type will be
               updated with the given label and corresponding number.
@@ -89,7 +90,7 @@ function Instructions() {
       </List.Item>
 
       <List.Item>
-        Press enter or click on the "<b>Save Caption</b>" button and wait a few
+        Press enter or click on "<b>Save Caption</b>" button and wait a few
         seconds.
       </List.Item>
     </List>

@@ -28,23 +28,23 @@ function Instructions() {
       <OpenAddOnMenuInstructions />
 
       <List.Item>
-        Click where you want to insert the list on document.
+        Click where you want to insert the list on the document.
         <List.Description>
-          The list will be inserted on the next paragraph which is part of the
+          The list will be inserted in the next paragraph which is part of the
           main structure of the document.
         </List.Description>
       </List.Item>
 
+      <OpenAddOnMenuInstructions />
+
       <List.Item>
-        Tap on the <b>Insert a list</b> menu.
+        Tap on "<b>Insert list of images</b>" or "<b>Insert list of tables</b>"
+        or "<b>Insert list of equations</b>" menu.
       </List.Item>
 
       <List.Item>
-        Tap on a targeted <b>element type</b> (image, table or equation).
-      </List.Item>
-
-      <List.Item>
-        Click on a <b>list type</b> and wait a few seconds.
+        Click on a <b>list type</b> (default or bookmarked) and wait a few
+        seconds.
       </List.Item>
     </List>
   );

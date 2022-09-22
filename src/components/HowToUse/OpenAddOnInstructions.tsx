@@ -16,18 +16,11 @@ export default function OpenAddOnMenuInstructions() {
       </List.Item>
 
       <List.Item>
-        Tap on the{" "}
-        <a
-          target={"_blank"}
-          href="https://support.google.com/docs/answer/2942256?hl=en&co=GENIE.Platform%3DAndroid#zippy=%2Cuse-add-ons"
-        >
-          add-ons
-        </a>{" "}
-        menu.
+        Tap on "<b>Add-ons menu</b>"". Your current add-ons will be listed.
       </List.Item>
 
       <List.Item>
-        Tap on the <b>"Caption Manager"</b> add-on.
+        Tap on "<b>Caption Manager</b>" menu.
       </List.Item>
     </React.Fragment>
   );

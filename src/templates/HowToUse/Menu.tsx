@@ -35,7 +35,7 @@ const sections: Section[] = [
     ],
   },
   {
-    title: "Manage Lists",
+    title: "Insert Lists",
     items: [
       {
         title: "Insert list from sidebar",
@@ -44,6 +44,15 @@ const sections: Section[] = [
       {
         title: "Insert list from add-on menu",
         pathname: "insert-list-from-add-on-menu",
+      },
+    ],
+  },
+  {
+    title: "Edit Caption Styles",
+    items: [
+      {
+        title: "Edit caption styles",
+        pathname: "edit-caption-styles",
       },
     ],
   },
