@@ -64,10 +64,10 @@ export default function PrivacyPolicy() {
                 <ul>
                   <li>
                     This scope allows this Add-on to display an add-on menu,
-                    where you can insert a list referencing your captions, open
-                    a sidebar to insert or edit captions, insert lists or
-                    receive quick instructions to perform the aforementioned
-                    tasks.
+                    where you can open a sidebar to insert or edit captions,
+                    insert lists, or receive quick instructions to perform the
+                    aforementioned tasks; insert lists referencing your
+                    captions; and open a modal to edit the styles of captions.
                   </li>
                 </ul>
               </li>
@@ -85,7 +85,9 @@ export default function PrivacyPolicy() {
                     usage is to write and replace text and manage bookmarks on
                     the active document, when inserting or editing a caption and
                     when inserting lists (blocks of text consisting of a header
-                    and paragraphs referencing captions).
+                    and paragraphs referencing captions). The third usage is to
+                    manage the styles of captions (which are just text elements
+                    in the document).
                   </li>
                 </ul>
               </li>
@@ -101,7 +103,7 @@ export default function PrivacyPolicy() {
             <h2>Information we collect</h2>
             <p>
               This Add-on stores information about caption label of an element
-              in a document through
+              in a document and saved styles of captions through
               <a
                 target={"_blank"}
                 href="https://developers.google.com/apps-script/guides/properties"
